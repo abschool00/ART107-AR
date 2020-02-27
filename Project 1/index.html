@@ -8,8 +8,14 @@
 
 <body>
   <a-scene embedded="" arjs="debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
-    <a-marker type='pattern' url='assets/pattern-dog-sign-1.patt '>
-      <a-box position="0 0.5 0" material="color: yellow;"></a-box>
+      
+       <a-assets>
+      <img id="dog" src="assets/pattern-dog-sign-1.png">
+     
+    </a-assets>
+      
+    <a-marker type='pattern' url='assets/pattern-dog-sign-1.patt'>
+          <a-image src="#dog" width="3" height="1.5" rotation="90 0 0"></a-image>
     </a-marker>
     <a-entity camera=""></a-entity>
   </a-scene>
