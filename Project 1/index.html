@@ -1,4 +1,7 @@
-<!-- Follow  --><!DOCTYPE html><html><head>
+<!DOCTYPE html>
+<html>
+
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Custom Marker</title>
@@ -8,17 +11,25 @@
 
 <body>
   <a-scene embedded="" arjs="debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
-      
-       <a-assets>
-      <img id="dog" src="assets/pattern-dog-sign-1.png">
-     
+
+<!-- Load gltf in asset management -->
+    <a-assets>
+      <a-asset-item id="dog" src="assets/pattern-dog-sign-1.png"></a-asset-item>
     </a-assets>
-      
-    <a-marker type='pattern' url='assets/pattern-dog-sign-1.patt'>
-          <a-image src="#dog" width="3" height="1.5" rotation="90 0 0"></a-image>
+
+    <a-marker type="pattern" url="assets/pattern-dog-sign-1.patt">
+
+      <!-- Display gltf from the asset management system. -->
+      <a-gltf-model src="#dog"></a-gltf-model>
+
+      <!-- Defining the URL inline. Not recommended but more comfortable for web developers. -->
+      <!-- <a-gltf-model src="assets/creeps.gltf"></a-gltf-model> -->
+
     </a-marker>
     <a-entity camera=""></a-entity>
   </a-scene>
 
 
-</body></html>
+</body>
+
+</html>
